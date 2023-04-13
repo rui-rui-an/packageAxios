@@ -14,10 +14,14 @@ export default {
   },
   created () {
     this.getList()
+    this.$axios.get('/user/list').then((res)=>{
+      console.log(res);
+    })
   },
   methods: {
-    getList () {
-      getListById({ id: 5 }, { loading: true, loadingDom: '.home' })
+    async getList () {
+      const res = await getListById({ id: 5 }, { loading: true, loadingDom: '.home' })
+      console.log(res)
     }
   }
 }

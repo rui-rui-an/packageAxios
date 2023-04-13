@@ -19,3 +19,10 @@ Mock.mock('/user/tableData', 'get', {
   message: '成功',
   data:tableData
 });
+Mock.mock('/message/listbyId', 'get', {
+  code: 200,
+  message: '成功',
+  data:tableData
+});
+
+export default Mock
