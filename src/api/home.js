@@ -32,11 +32,17 @@ export function getList(params) {
 }
 
 //使用loading
-export function getListById(params,loading) {
+export function getListById(loading) {
   return request({
     url: '/message/listbyId',
     method: 'get',
-    params,
     ...loading
+  });
+}
+
+export function gettableList() {
+  return request({
+    url: '/user/tableData',
+    method: 'get'
   });
 }
